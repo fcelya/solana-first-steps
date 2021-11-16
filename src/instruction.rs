@@ -31,7 +31,7 @@ impl EscrowInstruction{
 
         Ok(match tag{
             0 => Self::InitEscrow{
-                amount: Self::unpack_amount(rest)?,
+                amount: Self::unpack_amount(rest)?, //? makes the fn return the error if the output of the call is not Ok. The type of error returned is the type specified in the fn unpack()
             },
             _=> return Err(InvalidInstruction.into())
         })

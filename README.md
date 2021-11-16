@@ -13,3 +13,6 @@ $ cargo test
 $ cargo build-bpf
 $ cargo test-bpf
 ```
+
+
+credits go to the incredible tutorial at https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/
