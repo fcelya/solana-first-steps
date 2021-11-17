@@ -1,13 +1,13 @@
 
 use solana_program::{
-    account_info::AccountInfo,
+    account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
+    program_error::ProgramError,
     msg,
     pubkey::Pubkey,
     program_pack::{Pack, IsInitialized},
     sysvar::{rent::Rent, Sysvar},
 };
-use solana_program::account_info::next_account_info;
 
 use crate::{instruction::EscrowInstruction, error::EscrowError};
 
@@ -36,7 +36,7 @@ impl Processor{
             return Err(ProgramError::MissingRequiredSignature);
         }
 
-        let temp_token_account = next_account_info(acccount_info_iter)?;
+        let temp_token_account = next_account_info(account_info_iter)?;
         if *token_to_receive_account.owner != spl_token::id(){
             return Err(ProgramError::IncorrectProgramId);
         }

@@ -27,7 +27,7 @@ pub enum EscrowInstruction{
 impl EscrowInstruction{
     // Unpack the byte buffer into a [EscrowInstruction](enum.EscrowInstruction.html)
     pub fn unpack(input: &[u8]) -> Result<Self, ProgramError>{
-        let (tag,rest) = imput.split_first().ok_or(InvalidInstruction)?;
+        let (tag,rest) = input.split_first().ok_or(InvalidInstruction)?;
 
         Ok(match tag{
             0 => Self::InitEscrow{
