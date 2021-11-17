@@ -9,6 +9,7 @@ publish = false
 solana-program = "=1.8.1"
 thiserror = "=1.0.30"
 spl-token = {version = "=3.2.0", features = ["no-entrypoint"]}
+arrayref = "=0.3.6"
 
 [features]
 test-bpf = []
@@ -18,7 +19,7 @@ assert_matches = "1.4.0"
 solana-program-test = "=1.8.1"
 solana-sdk = "=1.8.1"
 solana-validator = "=1.8.1"
-#openssl-sys = "=0.9.70"
+
 
 [lib]
 crate-type = ["cdylib", "lib"]
