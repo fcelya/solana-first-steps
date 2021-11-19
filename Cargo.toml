@@ -7,6 +7,14 @@ publish = false
 
 [dependencies]
 solana-program = "=1.8.1"
+thiserror = "=1.0.30"
+spl-token = {version = "=3.2.0", features = ["no-entrypoint"]}
+arrayref = "=0.3.6"
+#https://github.com/substrate-developer-hub/substrate-node-template/issues/122
+#https://githubmemory.com/repo/rust-rocksdb/rust-rocksdb/issues/528
+
+#[patch.crates-io]
+#librocksdb-sys = { version = "=6.20.3", path = "C:/Program Files/rust-rocksdb/librocksdb-sys" }
 
 [features]
 test-bpf = []
@@ -16,6 +24,7 @@ assert_matches = "1.4.0"
 solana-program-test = "=1.8.1"
 solana-sdk = "=1.8.1"
 solana-validator = "=1.8.1"
+
 
 [lib]
 crate-type = ["cdylib", "lib"]

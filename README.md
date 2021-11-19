@@ -1,7 +1,8 @@
 ### Environment Setup
 1. Install Rust from https://rustup.rs/
 2. Install Solana from https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool
-
+3. Run vcpkg install openssl
+4. Run vcpkg install llvm
 ### Build and test for program compiled natively
 ```
 $ cargo build
@@ -13,3 +14,6 @@ $ cargo test
 $ cargo build-bpf
 $ cargo test-bpf
 ```
+
+
+credits go to the incredible tutorial at https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/
