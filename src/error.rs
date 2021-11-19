@@ -9,6 +9,11 @@ pub enum EscrowError{
     InvalidInstruction,
     #[error("Account is not rent exempt")]
     NotRentExempt,
+    #[error("Not all expected tokens were transferred")]
+    ExpectedAmountMismatch,
+    #[error("Amount overflown")]
+    AmountOverflow,
+
 }
 
 impl From<EscrowError> for ProgramError{
